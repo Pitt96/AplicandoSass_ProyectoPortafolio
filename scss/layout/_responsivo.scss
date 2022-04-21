@@ -1,0 +1,110 @@
+@media all and (min-width: 768px){
+    .contenedor_card_skills{
+        display: grid;
+        grid-template-areas: "uno dos"
+        "tres cuatro";
+        justify-content: center;
+        gap: 10px;
+        #uno{
+            grid-area: uno;
+        }
+        #dos{
+            grid-area: dos;
+        }
+        #tres{
+            grid-area: tres;
+        }
+        #cuatro{
+            grid-area: cuatro;
+        }
+    }
+    
+}
+@media all and (min-width: 1024px){
+    body{
+        .container{
+            header{
+                .nav{
+                    .nav-container{
+                        display: grid;
+                        grid-template-columns: 30% 70%;
+                        .nav__logo{
+                            margin-left: 80px;
+                        }
+                        .nav__label{
+                            display: none;
+                        }
+                        .nav__menu{
+                            margin-left: 45px;
+                            position: static;
+                            background:none;
+                            height:auto;
+                            clip-path:none;
+                            opacity: none;
+                            ul{
+                                color: $color-blanco;
+                                display: grid;
+                                grid-auto-flow: column;
+                                font-size: 10px;
+                                li{
+                                    margin-bottom: 0;
+                                    margin-left: 30px;
+                                    .nav__item{
+                                        font-size:20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .main_skills{
+        .skills{
+            .titulo_skills{
+                font-size:50px;
+            }
+            .con_des{
+                .des{
+                    font-size: 25px;
+                    margin: 2% 20% 5% 20%;
+                }
+            }
+        }
+        .contenedor_card_skills{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    footer{
+        width:100%;
+        background:gray;
+        color: $color-blanco;
+        display: inline-block;
+        text-align: center;
+        .titulo_footer{
+            font-family: $tipo-letra-titulos;
+            font-size:25px;
+            margin-top:20px;
+            margin-bottom:10px;
+        }
+        .footer_des{
+            font-family: $tipo-letra-contenido;
+            margin-left: 270px;
+            margin-right: 270px;
+            margin-bottom:10px;
+        }
+        .fa-brands{
+            color:$color-negro;
+            font-size:25px;
+            margin: 5px;
+        }
+    }
+    
+    
+    
+    
+}

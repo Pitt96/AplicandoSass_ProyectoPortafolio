@@ -1,0 +1,86 @@
+
+.main_skills{
+    width: 100%;
+    .skills{
+        width:100%;
+        height:auto;
+        text-align: center;
+        margin-top:120px;
+        margin-bottom:80px;
+        display: inline-block;
+        align-items: center;
+        .titulo_skills{
+            font-family: 'Kaushan Script', cursive;
+            font-size:30px;
+            margin-bottom:12px;
+        }
+        .con_des{
+            display: inline-block;
+            .des{
+                margin-bottom: 20px;
+                font-family: 'Special Elite', cursive;
+            }
+            .enlace{
+                text-decoration: none;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius:10px;
+                background:#1E8449;
+                .fa-solid{
+                    color:black;
+                }
+                span{
+                    color: white;
+                    font-weight: bold;
+                }
+                &:hover{
+                    background-color:black;
+                    color:white;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family:'Special Elite', cursive;
+                    transition:0.6s;
+                }
+            }
+        }
+    }
+    .contenedor_card_skills{
+        display: inline-block;
+        width:100%;
+        align-items: center;
+        text-align: center;
+        .skills_card{
+            border-radius: 30px;
+            display: inline-block;
+            width:280px;
+            background-color: #EAF2F8;
+            margin-bottom: 20px;
+            img{
+                border-radius: 30px;
+                width: 278px;
+                height: 350px;
+                margin-bottom: 10px;
+            }
+            .s_card_des{
+                margin-top: 60px;
+                margin-bottom:15px;
+                text-align: center;
+                font-family: 'Special Elite', cursive;
+                font-size:30px;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

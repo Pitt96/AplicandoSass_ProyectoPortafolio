@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; }
+
+.container {
+  display: grid;
+  width: 100%; }
+
+body .container header {
+  width: 100%; }
+  body .container header nav {
+    background-color: #293241;
+    width: 100%;
+    height: 80px;
+    color: #ffff;
+    position: fixed;
+    z-index: 10; }
+    body .container header nav .nav-container {
+      display: flex;
+      height: 100%;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center; }
+      body .container header nav .nav-container .nav__logo {
+        font-size: 40px;
+        font-weight: 900;
+        font-family: "Sacramento", cursive; }
+      body .container header nav .nav-container .nav__label {
+        display: block;
+        cursor: pointer; }
+        body .container header nav .nav-container .nav__label .fa-solid {
+          font-size: 27px;
+          color: #ffff; }
+      body .container header nav .nav-container .nav__input {
+        display: none; }
+        body .container header nav .nav-container .nav__input:checked + .nav__menu {
+          clip-path: circle(100% at center); }
+      body .container header nav .nav-container .nav__menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: black;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+        opacity: 0.9;
+        z-index: 5; }
+        body .container header nav .nav-container .nav__menu ul {
+          text-align: center; }
+          body .container header nav .nav-container .nav__menu ul li {
+            font-family: "Special Elite", cursive;
+            margin-bottom: 70px; }
+            body .container header nav .nav-container .nav__menu ul li .nav__item {
+              color: #ffff;
+              font-size: 32px;
+              --clippy:polygon(0 0,0 0,0 100%,0% 100%); }
+              body .container header nav .nav-container .nav__menu ul li .nav__item::after {
+                content: "";
+                display: block;
+                background-color: #ffff;
+                width: 90%;
+                margin-top: 3px;
+                height: 3px;
+                clip-path: var(--clippy);
+                transition: cli-path .5s; }
+              body .container header nav .nav-container .nav__menu ul li .nav__item:hover {
+                --clippy:polygon(0 0,100% 0,100% 100%,0% 100%); }
+
+.main_skills {
+  width: 100%; }
+  .main_skills .skills {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    display: inline-block;
+    align-items: center; }
+    .main_skills .skills .titulo_skills {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 30px;
+      margin-bottom: 12px; }
+    .main_skills .skills .con_des {
+      display: inline-block; }
+      .main_skills .skills .con_des .des {
+        margin-bottom: 20px;
+        font-family: 'Special Elite', cursive; }
+      .main_skills .skills .con_des .enlace {
+        text-decoration: none;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 10px;
+        background: #1E8449; }
+        .main_skills .skills .con_des .enlace .fa-solid {
+          color: black; }
+        .main_skills .skills .con_des .enlace span {
+          color: white;
+          font-weight: bold; }
+        .main_skills .skills .con_des .enlace:hover {
+          background-color: black;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          font-family: 'Special Elite', cursive;
+          transition: 0.6s; }
+  .main_skills .contenedor_card_skills {
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    text-align: center; }
+    .main_skills .contenedor_card_skills .skills_card {
+      border-radius: 30px;
+      display: inline-block;
+      width: 280px;
+      background-color: #EAF2F8;
+      margin-bottom: 20px; }
+      .main_skills .contenedor_card_skills .skills_card img {
+        border-radius: 30px;
+        width: 278px;
+        height: 350px;
+        margin-bottom: 10px; }
+      .main_skills .contenedor_card_skills .skills_card .s_card_des {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-family: 'Special Elite', cursive;
+        font-size: 30px; }
+
+footer {
+  width: 100%;
+  background: gray;
+  color: #ffff;
+  display: grid;
+  text-align: center;
+  grid-template-areas: "titulo_footer titulo_footer titulo_footer" "footer_des    footer_des    footer_des" "fa-github      fa-instagram  fa-linkedin" "fa-whatsapp    fa-telegram    fa-facebook-f";
+  justify-content: center; }
+  footer .titulo_footer {
+    font-family: "Kaushan Script", cursive;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    grid-area: titulo_footer; }
+  footer .footer_des {
+    font-family: "Special Elite", cursive;
+    margin-bottom: 10px;
+    font-size: 15px;
+    grid-area: footer_des; }
+  footer .fa-brands {
+    color: black;
+    font-size: 25px;
+    margin: 5px; }
+  footer .iz_1 {
+    grid-area: fa-github;
+    justify-self: end; }
+  footer .cen_1 {
+    grid-area: fa-instagram;
+    justify-self: center; }
+  footer .der_1 {
+    grid-area: fa-linkedin;
+    justify-self: start; }
+  footer .iz_2 {
+    grid-area: fa-whatsapp;
+    justify-self: end; }
+  footer .cen_2 {
+    grid-area: fa-telegram;
+    justify-self: center; }
+  footer .der_2 {
+    grid-area: fa-facebook-f;
+    justify-self: start; }
+
+@media all and (min-width: 768px) {
+  .contenedor_card_skills {
+    display: grid;
+    grid-template-areas: "uno dos" "tres cuatro";
+    justify-content: center;
+    gap: 10px; }
+    .contenedor_card_skills #uno {
+      grid-area: uno; }
+    .contenedor_card_skills #dos {
+      grid-area: dos; }
+    .contenedor_card_skills #tres {
+      grid-area: tres; }
+    .contenedor_card_skills #cuatro {
+      grid-area: cuatro; } }
+
+@media all and (min-width: 1024px) {
+  body .container header .nav .nav-container {
+    display: grid;
+    grid-template-columns: 30% 70%; }
+    body .container header .nav .nav-container .nav__logo {
+      margin-left: 80px; }
+    body .container header .nav .nav-container .nav__label {
+      display: none; }
+    body .container header .nav .nav-container .nav__menu {
+      margin-left: 45px;
+      position: static;
+      background: none;
+      height: auto;
+      clip-path: none;
+      opacity: none; }
+      body .container header .nav .nav-container .nav__menu ul {
+        color: #ffff;
+        display: grid;
+        grid-auto-flow: column;
+        font-size: 10px; }
+        body .container header .nav .nav-container .nav__menu ul li {
+          margin-bottom: 0;
+          margin-left: 30px; }
+          body .container header .nav .nav-container .nav__menu ul li .nav__item {
+            font-size: 20px; }
+  .main_skills .skills .titulo_skills {
+    font-size: 50px; }
+  .main_skills .skills .con_des .des {
+    font-size: 25px;
+    margin: 2% 20% 5% 20%; }
+  .main_skills .contenedor_card_skills {
+    display: flex;
+    flex-wrap: wrap; }
+  footer {
+    width: 100%;
+    background: gray;
+    color: #ffff;
+    display: inline-block;
+    text-align: center; }
+    footer .titulo_footer {
+      font-family: "Kaushan Script", cursive;
+      font-size: 25px;
+      margin-top: 20px;
+      margin-bottom: 10px; }
+    footer .footer_des {
+      font-family: "Special Elite", cursive;
+      margin-left: 270px;
+      margin-right: 270px;
+      margin-bottom: 10px; }
+    footer .fa-brands {
+      color: black;
+      font-size: 25px;
+      margin: 5px; } }
